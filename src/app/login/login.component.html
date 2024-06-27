@@ -1,0 +1,9 @@
+<section>
+  <form>
+    @for (data of formInputData; track data.identifier) {
+        <app-input [inputData]="data" />
+    }
+    <hr />
+    <button type="submit" (click)="onFormSubmit()">Submit</button>
+  </form>
+</section>
