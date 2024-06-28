@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { InputComponent } from '../input/input.component';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [InputComponent],
+  imports: [InputComponent, NgFor],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
