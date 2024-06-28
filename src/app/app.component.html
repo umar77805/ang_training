@@ -1,3 +1,6 @@
 <main>
-  <app-login />
+  <app-login (submitted)="handleSubmit()" />
+  <div (click)="handleSubmitTextClick()" class="submitText">
+    <p *ngIf="isSubmitted">Hey! You have submitted the form successfully</p>
+  </div>
 </main>

@@ -1,7 +1,7 @@
 <section>
-  <form>
+  <form (ngSubmit)="onFormSubmit()">
     <app-input [inputData]="data" *ngFor="let data of formInputData" />
     <hr />
-    <button type="submit" (click)="onFormSubmit()">Submit</button>
+    <button type="submit">Submit</button>
   </form>
 </section>
