@@ -1,6 +1,6 @@
 <main>
-  <app-login (submitted)="handleSubmit()" />
-  <div (click)="handleSubmitTextClick()" class="submitText">
-    <p *ngIf="isSubmitted">Hey! You have submitted the form successfully</p>
+  <app-login *ngIf="!isLoggedIn" (submitted)="onLogin($event)" />
+  <div *ngIf="isLoggedIn" class="submitText">
+    <app-home [loginTime]="loginTime"/>
   </div>
 </main>

@@ -1,22 +1,21 @@
 import { Component } from '@angular/core';
 import { LoginComponent } from './login/login.component';
 import { NgIf } from '@angular/common';
+import { HomeComponent } from "./home/home.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [LoginComponent, NgIf],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
+    imports: [LoginComponent, NgIf, HomeComponent]
 })
 export class App {
-  isSubmitted = false;
+  isLoggedIn = false;
+  loginTime = new Date();
 
-  handleSubmit = () => {
-    this.isSubmitted = true;
-  }
-
-  handleSubmitTextClick = () => {
-    this.isSubmitted = false;
+  onLogin = (time: Date) => {
+    this.isLoggedIn = true;
+    this.loginTime = time;
   }
 }
